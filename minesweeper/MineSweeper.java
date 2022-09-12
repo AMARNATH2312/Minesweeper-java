@@ -31,8 +31,10 @@ public class MineSweeper {
       inputIndex = scanner.nextInt();
     } while (inputHandler(inputIndex) > 0 && turns < cells - size);
 
-    if (turns >= cells - size) {
+    if (turns <= cells - size) {
       System.out.println("You win");
+    }else{
+      System.out.println("You lose");
     }
     scanner.close();
   }
